@@ -1,0 +1,38 @@
+{
+  "name": "dreamfactory-rolesync",
+  "version": "0.0.1",
+  "description": "DreamFactory Roles doc/deploy with command line interface (CLI)",
+  "main": "rolesync.js",
+  "scripts": {
+    "test": "istanbul cover _mocha -- -R spec",
+    "watch": "istanbul cover _mocha -- -R spec --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/juniorconte/rolesync.git"
+  },
+  "keywords": [
+    "dreamfactory",
+    "deploy",
+    "automatic",
+    "documentation"
+  ],
+  "author": "Junior Conte",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/juniorconte/dreamfactory-rolesync/issues"
+  },
+  "homepage": "https://github.com/juniorconte/dreamfactory-rolesync#readme",
+  "preferGlobal": true,
+  "bin": {
+    "rolesync": "rolesync.js"
+  },
+  "devDependencies": {
+    "istanbul": "^0.4.5",
+    "mocha": "^5.0.0",
+    "should": "^13.2.1"
+  },
+  "dependencies": {
+    "commander": "^2.13.0"
+  }
+}
