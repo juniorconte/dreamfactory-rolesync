@@ -9,6 +9,9 @@ install:
 start new project:
 `rolesync init`
 
+create new role:
+`rolesync create <name>`
+
 check version:
 `rolesync --version`
 

@@ -1,0 +1,35 @@
+#
+# - service: _table/name/
+#  ALL: ALL
+#
+# - service: _table/name/
+#  GET: ALL
+#  POST: SCRIPT
+#
+# - service: _table/name/
+#   ALL: SCRIPT
+#   GET: API
+#   POST: API
+#   when: id in {lookup}
+#
+# - service: _table/name/
+#   ALL: SCRIPT
+#   GET: API
+#   POST: API
+#   when:
+#     - id in {lookup}
+#     - active = 1
+#
+# - service: _table/name/
+#   GET: ALL
+#   POST: SCRIPT
+#   PUT: SCRIPT
+#   PATCH: SCRIPT
+#   DELETE: SCRIPT
+#   in:
+#     - id = {lookup1}
+#     - id = {lookup2}
+#     - id = {lookup3}
+#
+---
+# insert your doc here
