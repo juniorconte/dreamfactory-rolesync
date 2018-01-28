@@ -5,7 +5,7 @@ var program = require('commander');
 var pkg = require('./package.json');
 var init = require('./lib/rolesync-init');
 var create = require('./lib/rolesync-create');
-var mount = require('./lib/rolesync-mount');
+var collect = require('./lib/rolesync-collect');
 
 program
   .version(pkg.version);
@@ -21,9 +21,15 @@ program
   .action(create.template);
 
 program
-  .command('mount <environment>')
-  .description('Get roles from source environment')
-  .action(mount);
+  .command('collect <environment>')
+  .description('Generate roles from remote source environment')
+  .action(collect);
+
+program
+  .command('*')
+  .action(function(command) {
+    console.log('The command "%s" is not valid\nExecute "rolesync --help" to view the complete list of commands', command);
+  });
 
 program
   .parse(process.argv);
