@@ -1,5 +1,5 @@
 # rolesync
-**DreamFactory Roles doc/deploy with command line interface (CLI)**
+**[DreamFactory](http://www.dreamfactory.com) roles doc/deploy with command line interface**
 
 **IMPORTANT** : *This project is in the development stage and is not yet recommended to use in your production environment.*
 
@@ -11,6 +11,9 @@ start new project:
 
 create new role:
 `rolesync create <name>`
+
+generate docs from remote environment:
+`rolesync collect <env>`
 
 check version:
 `rolesync --version`
