@@ -1,6 +1,6 @@
 {
   "name": "dreamfactory-rolesync",
-  "version": "0.0.4",
+  "version": "0.1.0",
   "description": "DreamFactory Roles doc/deploy with command line interface (CLI)",
   "main": "rolesync.js",
   "scripts": {
