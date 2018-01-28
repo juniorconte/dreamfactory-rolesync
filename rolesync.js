@@ -17,12 +17,11 @@ program
 
 program
   .command('create <role>')
-  .description('Create new role with name')
-  .action(create);
+  .description('Create new role from template with name')
+  .action(create.template);
 
 program
   .command('mount <environment>')
-  .option('-o, --only <role>', 'only specific role')
   .description('Get roles from source environment')
   .action(mount);
 
