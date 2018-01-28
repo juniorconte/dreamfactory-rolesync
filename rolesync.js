@@ -17,8 +17,8 @@ program
 
 program
   .command('create <role>')
-  .description('Create new role from template with name')
-  .action(create.template);
+  .description('Create new role with name from sample template')
+  .action(create.sample);
 
 program
   .command('collect <environment>')
