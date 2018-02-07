@@ -22,6 +22,7 @@ program
 
 program
   .command('collect <environment>')
+  .option('-p, --password [type]', 'Execute with password')
   .description('Generate roles from remote source environment')
   .action(collect);
 
