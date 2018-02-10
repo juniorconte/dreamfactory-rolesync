@@ -13,7 +13,7 @@ create new role:
 `rolesync create <name>`
 
 generate docs from remote environment:
-`rolesync collect <env>`
+`rolesync collect <env> [--password][--only][--force]`
 
 check version:
 `rolesync --version`

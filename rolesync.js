@@ -22,7 +22,9 @@ program
 
 program
   .command('collect <environment>')
-  .option('-p, --password [type]', 'Execute with password')
+  .option('-p, --password [type]', 'Performs with the password specified in the command')
+  .option('-o, --only [role]', 'Downloads only the specified role')
+  .option('-f, --force', 'Overwrites locally if already exist')
   .description('Generate roles from remote source environment')
   .action(collect);
 
