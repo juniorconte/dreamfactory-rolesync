@@ -18,6 +18,9 @@ generate local catalog of services from remote environment:
 generate humanized docs from remote environment:
 `rolesync collect <env> [--password][--only][--force]`
 
+validate local role doc structure:
+`rolesync validate <env> [--only]`
+
 check version:
 `rolesync --version`
 

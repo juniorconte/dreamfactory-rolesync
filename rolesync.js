@@ -7,6 +7,7 @@ var init = require('./lib/rolesync-init');
 var create = require('./lib/rolesync-create');
 var catalog = require('./lib/rolesync-catalog');
 var collect = require('./lib/rolesync-collect');
+var validate = require('./lib/rolesync-validate');
 
 program
   .version(pkg.version);
@@ -34,6 +35,12 @@ program
   .option('-f, --force', 'Overwrites locally if already exist')
   .description('Create roles from remote source environment')
   .action(collect);
+
+program
+  .command('validate <environment>')
+  .option('-o, --only [role]', 'Validate only specified role')
+  .description('Validate roles structure')
+  .action(validate.roles);
 
 program
   .command('*')
