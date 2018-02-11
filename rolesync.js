@@ -5,6 +5,7 @@ var program = require('commander');
 var pkg = require('./package.json');
 var init = require('./lib/rolesync-init');
 var create = require('./lib/rolesync-create');
+var catalog = require('./lib/rolesync-catalog');
 var collect = require('./lib/rolesync-collect');
 
 program
@@ -21,11 +22,17 @@ program
   .action(create.sample);
 
 program
+  .command('catalog <environment>')
+  .option('-p, --password [type]', 'Performs with the password specified in the command')
+  .description('Create local catalog from remote services of environment')
+  .action(catalog.command);
+
+program
   .command('collect <environment>')
   .option('-p, --password [type]', 'Performs with the password specified in the command')
-  .option('-o, --only [role]', 'Downloads only the specified role')
+  .option('-o, --only [role]', 'Downloads only specified role')
   .option('-f, --force', 'Overwrites locally if already exist')
-  .description('Generate roles from remote source environment')
+  .description('Create roles from remote source environment')
   .action(collect);
 
 program

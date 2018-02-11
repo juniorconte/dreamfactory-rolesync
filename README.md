@@ -12,7 +12,10 @@ start new project:
 create new role:
 `rolesync create <name>`
 
-generate docs from remote environment:
+generate local catalog of services from remote environment:
+`rolesync catalog <env>`
+
+generate humanized docs from remote environment:
 `rolesync collect <env> [--password][--only][--force]`
 
 check version:
